@@ -100,6 +100,7 @@ int main()
         t[b].n.push_back(a);
         t[a].u.push_back(b);
     }
+    printf("%s有补格\n",youbuge()?"是":"不是");
     printf("请输入a<空格>b来查询a与b的盖住关系\n");
     scanf("%d %d",&a,&b);
     num1=0;
@@ -112,5 +113,4 @@ int main()
         printf("a盖住b\n");
     else
         printf("无盖住关系\n");
-    printf("%s有补格\n",youbuge()?"是":"不是");
 }

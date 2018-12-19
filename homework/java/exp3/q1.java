@@ -26,7 +26,7 @@ class q1 extends JComponent {
         cal.add(l1);
         l1.setBounds(30,60,100,10);
         l1.setVisible(true);
-        l1.setText("Tow numbers:");
+        l1.setText("Two numbers:");
         l2=new JLabel();
         cal.add(l2);
         l2.setBounds(30,130,100,10);

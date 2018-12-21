@@ -28,7 +28,7 @@ int main()
 {
     int seed=time(NULL);
     srand(seed);
-    n=random(4,8);
+    n=random(2,10);
     int ne=random(n-1,n*(n-1)/2);
     while(t.size()!=n)
     {
@@ -52,13 +52,12 @@ int main()
     for(int i=1;i<=n;i++)
         if(v[i].e.size()&1)
             cnt++;
+    printf("%d\n",n);
+    set<int>::iterator j;
+    for(int i=1;i<=n;i++)
+        for(j=v[i].e.begin();j!=v[i].e.end();j++)
+            if(*j>i)
+                printf("%d %d\n",i,*j);
     if(cnt==0||cnt==2)
-    {
-        printf("%d\n",n);
-        set<int>::iterator j;
-        for(int i=1;i<=n;i++)
-            for(j=v[i].e.begin();j!=v[i].e.end();j++)
-                if(*j>i)
-                    printf("%d %d\n",i,*j);
-    }
+        printf("存在欧拉回路\n");
 }

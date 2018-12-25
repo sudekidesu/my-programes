@@ -1184,9 +1184,9 @@ class TFtabAndDNFCNF
 }
 public class DNFCNF
 {
-    static TFtabAndDNFCNF T=new TFtabAndDNFCNF();
+    static TFtabAndDNFCNF T;
     public static void main(String args[])
     {
-
+        T=new TFtabAndDNFCNF();
     }
 }

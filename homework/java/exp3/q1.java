@@ -2,7 +2,7 @@ import java.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-class q1 extends JComponent {
+class q1 extends JFrame {
     JFrame cal;
     JLabel l1,l2;
     JTextField t1,t2,t3;
@@ -13,7 +13,7 @@ class q1 extends JComponent {
         cal.setLayout(null);
         cal.setVisible(true);
         cal.setResizable(false);
-        cal.setTitle("cal");
+        cal.setTitle("calculator");
         cal.addWindowListener(new WindowAdapter()
         {
             public void windowClosing(WindowEvent e)

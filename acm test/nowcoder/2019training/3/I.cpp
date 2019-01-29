@@ -10,8 +10,6 @@ int main()
     while(n--)
     {
         scanf("%d",&a);
-        if(a<60)
-            ans+=400;
+        printf("cnznb\n");
     }
-    printf("%d\n",ans);
 }

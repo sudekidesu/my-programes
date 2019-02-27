@@ -31,39 +31,9 @@ int main( int argc, char *argv[] )
 	//   	   		for(int x2=8;x2<=10;x2++)
 	 //  	   			for(int y2=4;y2<=6;y2++)
 	 //  	   			{
-	   	   				int x1=random(1,10000)%3+1;
-	   	   				int y1=random(1,10000)%3+4;
-	   	   				int x2=random(1,10000)%3+8;
-	   	   				int y2=random(1,10000)%3+4;
-	   	   				printf("7 %d %d\n",x1,y1);
-	   	   				printf("G %d %d\n",x2,y2);
-	   	   				s.clear();
-	   	   				pair<int,int> p;
-	   	   				p.first=x1;
-	   	   				p.second=y1;
-	   	   				s.insert(p);
-	   	   				p.first=x2;
-	   	   				p.second=y2;
-	   	   				s.insert(p);
-	   	   				for(int i=0;i<6;i++)
-	   	   				{
-	   	   					int a=random(1,10000)%3+1;
-	   	   				//	if(a==1)
-	   	   						printf("C");
-	   	   				//	else if(a==2)
-	   	   				//		printf("H");
-	   	   				//	else if(a==3) 
-	   	   				//		printf("R");
-		   	   				p.first=random(1,10000)%10+1;
-		   	   				p.second=random(1,10000)%9+1;
-	   	   					while(s.find(p)!=s.end())
-	   	   					{
-		   	   					p.first=random(1,10000)%10+1;
-		   	   					p.second=random(1,10000)%9+1;
-		   	   				}
-	   	   					printf(" %d %d\n",p.first,p.second);
-						}
-					//}
-		printf("0 0 0\n");
+	 
+	 
+//	 		printf("8 8\n");
+	   	  printf("%d %d\n",random(1,10),random(1,10));
 
 }

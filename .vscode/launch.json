@@ -4,6 +4,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - exp1",
+            "request": "launch",
+            "mainClass": "exp1",
+            "projectName": "my-programes_327c7c4a"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - DNFCNF",
             "request": "launch",
             "cwd": "${workspaceFolder}",

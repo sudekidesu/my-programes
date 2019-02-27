@@ -1,0 +1,17 @@
+D:\my-programes\test.cpp: In function 'int main()':
+D:\my-programes\test.cpp:7:11: error: no matching function for call to 'find(int)'
+     find(1);
+           ^
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_facets.h:48:0,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_ios.h:37,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ios:44,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ostream:38,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:39,
+                 from D:\my-programes\test.cpp:2:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\streambuf_iterator.h:369:5: note: candidate: template<class _CharT2> typename __gnu_cxx::__enable_if<std::__is_char<_CharT2>::__value, std::istreambuf_iterator<_CharT> >::__type std::find(std::istreambuf_iterator<_CharT>, std::istreambuf_iterator<_CharT>, const _CharT2&)
+     find(istreambuf_iterator<_CharT> __first,
+     ^~~~
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\streambuf_iterator.h:369:5: note:   template argument deduction/substitution failed:
+D:\my-programes\test.cpp:7:11: note:   mismatched types 'std::istreambuf_iterator<_CharT>' and 'int'
+     find(1);
+           ^

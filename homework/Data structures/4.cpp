@@ -2,10 +2,10 @@
 #include<cstring>
 #include<algorithm>
 #include<time.h>
-#pragma GCC optimize(3)
+// #pragma GCC optimize(3)
 using namespace std;
 #define random(a,b) ((a)+rand()%((b)-(a)+1))
-int n,num[1000000];
+int n,num[100000000],numt[100000000];
 void quick_sort(int *l,int *r)
 {
     if(l>=--r)
@@ -19,7 +19,7 @@ void quick_sort(int *l,int *r)
     quick_sort(l,a);
     quick_sort(++a,++r);
 }
-int g[1000001];
+int g[100000001];
 void merge_sort(int *l,int *r)
 {
     if(l>=r-1)
@@ -80,7 +80,7 @@ void Max_heap(int *l,int *r)
 {
     l--;
     int n=r-l-1;
-    for(int k=n/2;k>0;k--)
+    for(int k=n>>1;k>0;k--)
     {
         int t=k;
         while((t<<1)<=n)
@@ -125,40 +125,38 @@ int main()
     int seed=time(NULL);
     srand(seed);
     scanf("%d",&n);
-    if(n>1000000)
+    if(n>100000000)
         exit(0);
     for(int i=0;i<n;i++)
-        num[i]=random(1,100000);
-    int a=clock();
-    sort(num,num+n);
-    printf("sort_time=%dms\n",clock()-a);
+        numt[i]=random(1,100000000);
+    int a;
     for(int i=0;i<n;i++)
-        num[i]=random(1,100000);
+        num[i]=numt[i];
     a=clock();
     quick_sort(num,num+n);
     printf("quick_sort_time=%dms\n",clock()-a);
     for(int i=0;i<n;i++)
-        num[i]=random(1,100000);
+        num[i]=numt[i];
     a=clock();
     merge_sort(num,num+n);
     printf("merge_sort_time=%dms\n",clock()-a);
     for(int i=0;i<n;i++)
-        num[i]=random(1,100000);
+        num[i]=numt[i];
     a=clock();
     heap_sort(num,num+n);
     printf("heap_sort_time=%dms\n",clock()-a);
     for(int i=0;i<n;i++)
-        num[i]=random(1,100000);
+        num[i]=numt[i];
     a=clock();
     insertion_sort(num,num+n);
     printf("insertion_sort_time=%dms\n",clock()-a);
     for(int i=0;i<n;i++)
-        num[i]=random(1,100000);
+        num[i]=numt[i];
     a=clock();
     selection_sort(num,num+n);
     printf("selection_sort_time=%dms\n",clock()-a);
     for(int i=0;i<n;i++)
-        num[i]=random(1,100000);
+        num[i]=numt[i];
     a=clock();
     bubble_sort(num,num+n);
     printf("bubble_sort_time=%dms\n",clock()-a);
